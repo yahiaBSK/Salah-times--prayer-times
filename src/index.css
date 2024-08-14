@@ -1,0 +1,56 @@
+.mainBody{
+  position: relative;
+  overflow: hidden;
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: radial-gradient(circle at center, hsla(128, 10%, 45%, 1) 30%, transparent 70%);
+    background-size: 100%;
+    width: 600px;
+    height: 600px;
+    border-radius: 0px;
+    z-index: -1;
+    animation: animation 240s linear infinite reverse;
+    opacity: 0.25;
+    z-index: -99999;
+  }
+}
+@keyframes animation {
+  0%{
+    transform: translate(0px, 0px);
+  }
+  10%{
+    transform: translate(-600px, 550px);
+  }
+  20%{
+    transform: translate(-1200px, 600px);
+  }
+  30%{
+    transform: translate(-1000px, 100px);
+  }
+  40%{
+    transform: translate(-500px, 0px);
+  }
+  50%{
+    transform: translate(-800px, 300px);
+  }
+  60%{
+    transform: translate(-50px, 350px);
+  }
+  70%{
+    transform: translate(500px, 750px);
+  }
+  80%{
+    transform: translate(-350px, 800px);
+  }
+  90%{
+    transform: translate(-1300px, 60px);
+  }
+  100%{
+    transform: translate(0px, 0px);
+  }
+}
