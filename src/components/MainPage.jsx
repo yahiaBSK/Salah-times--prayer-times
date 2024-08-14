@@ -84,7 +84,7 @@ function MainPage(){
     function calcRemainingTime(){
       function calcSteps(salah){
         let remainingHrs = ((salahTime[salah].slice(0,2)) - (new Date().getHours()))
-        if (remainingHrs == "00") {
+        if (remainingHrs == 0) {
           remainingHrs = 23
         }
         let remainingMin = ((salahTime[salah].slice(3,5)) - (new Date().getMinutes()))
@@ -104,7 +104,7 @@ function MainPage(){
           if ((remainingSec) < 10) {
             secPadding = "0"
           }
-          return `${hrsPadding}${23+remainingHrs}:${minPadding}${60+remainingMin}:${secPadding}${remainingSec}`
+          return `${hrsPadding}${24+remainingHrs}:${minPadding}${60+remainingMin}:${secPadding}${remainingSec}`
         }
 
         if (remainingHrs < 0 && remainingMin >= 0) {
@@ -117,7 +117,7 @@ function MainPage(){
           if ((remainingSec) < 10) {
             secPadding = "0"
           }
-          return `${hrsPadding}${23+remainingHrs}:${minPadding}${remainingMin}:${secPadding}${remainingSec}`
+          return `${hrsPadding}${24+remainingHrs}:${minPadding}${remainingMin}:${secPadding}${remainingSec}`
         }
 
         if (remainingHrs >= 0 && remainingMin < 0) {
