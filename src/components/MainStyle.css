@@ -16,6 +16,7 @@
   direction: rtl;
   font-family: 'Lateef';
   font-size: 1.3rem;
+  transition: 0.25s ease-in-out;
 }
 
 body{
@@ -45,7 +46,7 @@ body{
 .titlesDiv{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   max-width: 990px;
   padding: 25px;
@@ -63,12 +64,16 @@ body{
 }
 .titlesDiv .selectLocationDiv{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
   & select{
     cursor: pointer;
-    width: 5em;
-    max-width: 5em;
+    min-width: 5em;
+    width: 7em;
+    max-width: 10em;
     background-color: transparent;
     border: 2px dashed var(--Thurd-color);
     border-radius: 10px;

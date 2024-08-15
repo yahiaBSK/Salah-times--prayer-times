@@ -95,7 +95,7 @@ function MainPage(){
         let hrsPadding="", minPadding ="", secPadding=""
 
         if (remainingHrs < 0 && remainingMin < 0) {
-          if (23+remainingHrs < 10) {
+          if (24+remainingHrs < 10) {
             hrsPadding = "0"
           }
           if (60+remainingMin < 10) {
@@ -108,7 +108,7 @@ function MainPage(){
         }
 
         if (remainingHrs < 0 && remainingMin >= 0) {
-          if (23+remainingHrs < 10) {
+          if (24+remainingHrs < 10) {
             hrsPadding = "0"
           }
           if (remainingMin < 10) {

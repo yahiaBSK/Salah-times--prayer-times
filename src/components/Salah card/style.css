@@ -3,7 +3,7 @@
   src: url('../../assets/fonts/Islamic.ttf') format('truetype');
 }
 .mainSalahCardDiv{
-  background-color: red;
+  /* background-color: red; */
   color: white;
   display: flex;
   flex-direction: column;
