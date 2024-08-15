@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400..900&display=swap');
+
+.mainFooterDiv{
+  background-color: rgb(20, 42, 42);
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  direction: ltr;
+  font-family: 'Gabarito';
+  gap: 2rem;
+  & p, & div{
+    font-family: 'Gabarito';
+    direction: ltr;
+  }
+}
+
+.devInfoDiv{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  &::before{
+    content: '';
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    top: 120%;
+    left: 0;
+    transform: perspective(2em) rotateX(45deg) scale(0.50);
+    filter: blur(1.5em);
+  }
+}
+.devInfoDiv .imgDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.devInfoDiv .imgDiv img{
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  box-shadow: 0 0 0 2px rgb(255, 255, 255, 1),
+              0 0 0 6px rgba(255, 255, 255, 0.15),
+              0 0 1em 0 white;
+}
+.devInfoDiv .infoDiv{
+  border-radius: 25px;
+  padding: 10px;
+  text-align: start;
+  position: relative;
+  & p{
+    padding: 0px;
+    color: white;
+    text-shadow: 0 0 1em white;
+  }
+
+}
+.devInfoDiv .infoDiv #devName{
+  font-size: 1rem;
+  font-weight: 900;
+}
+.devInfoDiv .infoDiv #devJob{
+  font-size: 0.5rem;
+  font-weight: 100;
+}
+
+.splittLine{
+  background-color: white;
+  width: .15em;
+  height: 1.5em;
+  animation: splittLineAnimation 5s infinite ease-out;
+}
+@keyframes splittLineAnimation {
+  0%{
+    background-color: white;
+    transform: rotateX(0deg);
+  }
+  20%{
+    background-color: rgb(124, 0, 254);
+    transform: rotateX(180deg);
+  }
+  40%{
+    background-color: white;
+    transform: rotateX(0deg);
+  }
+}
+
+.socialLinksDiv{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  gap: .5em;
+  margin-bottom: -.25em;
+}
+.socialLinksDiv a{
+  text-decoration: none;
+  outline: none;
+  position: relative;
+  text-shadow: 0 0 1em white;
+  padding: 0 10px;
+  /* transition: 0.25s ease-in-out; */
+  &::before{
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 100%;
+    top: 155%;
+    left: 0;
+    transform: perspective(0.75em) rotateX(45deg) scale(0.5);
+    filter: blur(0.75em);
+    transition: 0.25s ease-in-out;
+  }
+  &:hover{
+    text-shadow: 0 0 1em rgb(124, 0, 254);
+    color: rgb(124, 0, 254);
+    & i{
+      color: rgb(124, 0, 254);
+    }
+    &::before{
+      background-color: rgb(124, 0, 254);
+    }
+  }
+}
+.socialLinksDiv a i{
+  color: white;
+  position: relative;
+  transition: 0.25s ease-in-out;
+}

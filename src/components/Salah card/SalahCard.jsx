@@ -1,5 +1,4 @@
 import './style.css'
-// import timeIcon from '../../assets/clock.gif'
 
 
 function SalahCard(props){
