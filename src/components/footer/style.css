@@ -3,13 +3,16 @@
 .mainFooterDiv{
   background-color: rgb(20, 42, 42);
   width: 100%;
-  height: 250px;
+  height: fit-content;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   direction: ltr;
+  flex-wrap: wrap;
+  margin-top: 2.5em;
   font-family: 'Gabarito';
+  padding: 50px;
   gap: 2rem;
   & p, & div{
     font-family: 'Gabarito';
@@ -98,6 +101,8 @@
   justify-items: center;
   gap: .5em;
   margin-bottom: -.25em;
+  padding-bottom: 3em;
+  padding-top: 3em;
 }
 .socialLinksDiv a{
   text-decoration: none;
@@ -134,4 +139,10 @@
   color: white;
   position: relative;
   transition: 0.25s ease-in-out;
+}
+
+@media screen and (max-width: 337px){
+  .splittLine{
+    display: none;
+  }
 }

@@ -46,9 +46,10 @@ body{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: 100%;
+  width: 90%;
   max-width: 990px;
   padding: 25px;
+  margin-top: 20px;
   /* border-bottom: 2px solid rgba(214, 189, 152, 0.25); */
   margin-bottom: 50px;
   align-items: center;
