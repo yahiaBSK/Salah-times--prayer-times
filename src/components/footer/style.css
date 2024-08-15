@@ -75,9 +75,11 @@
 
 .splittLine{
   background-color: white;
-  width: .15em;
+  width: .10em;
   height: 1.5em;
+  box-shadow: 0 0 1em white;
   animation: splittLineAnimation 5s infinite ease-out;
+  border-radius: 100px;
 }
 @keyframes splittLineAnimation {
   0%{
@@ -87,6 +89,7 @@
   20%{
     background-color: rgb(124, 0, 254);
     transform: rotateX(180deg);
+    box-shadow: 0 0 1em rgb(124, 0, 254);
   }
   40%{
     background-color: white;
