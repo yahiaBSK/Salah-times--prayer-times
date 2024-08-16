@@ -105,7 +105,7 @@ function MainPage(){
           if ((remainingSec) < 10) {
             secPadding = "0"
           }
-          return `${hrsPadding}${24+remainingHrs}:${minPadding}${60+remainingMin}:${secPadding}${remainingSec}`
+          return `${hrsPadding}${24+remainingHrs-1}:${minPadding}${60+remainingMin}:${secPadding}${remainingSec}`
         }
 
         if (remainingHrs < 0 && remainingMin >= 0) {
@@ -118,7 +118,7 @@ function MainPage(){
           if ((remainingSec) < 10) {
             secPadding = "0"
           }
-          return `${hrsPadding}${24+remainingHrs}:${minPadding}${remainingMin}:${secPadding}${remainingSec}`
+          return `${hrsPadding}${24+remainingHrs-1}:${minPadding}${remainingMin}:${secPadding}${remainingSec}`
         }
 
         if (remainingHrs >= 0 && remainingMin < 0) {
@@ -131,7 +131,7 @@ function MainPage(){
           if ((remainingSec) < 10) {
             secPadding = "0"
           }
-          return `${hrsPadding}${remainingHrs}:${minPadding}${60+remainingMin}:${secPadding}${remainingSec}`
+          return `${hrsPadding}${remainingHrs-1}:${minPadding}${60+remainingMin}:${secPadding}${remainingSec}`
         }
 
         if (remainingHrs >= 0 && remainingMin >= 0) {
@@ -144,7 +144,7 @@ function MainPage(){
           if ((remainingSec) < 10) {
             secPadding = "0"
           }
-          return `${hrsPadding}${remainingHrs}:${minPadding}${remainingMin}:${secPadding}${remainingSec}`
+          return `${hrsPadding}${remainingHrs-1}:${minPadding}${remainingMin}:${secPadding}${remainingSec}`
         }
 
         else{
