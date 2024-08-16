@@ -3,7 +3,6 @@
   src: url('../../assets/fonts/Islamic.ttf') format('truetype');
 }
 .mainSalahCardDiv{
-  /* background-color: red; */
   color: white;
   display: flex;
   flex-direction: column;
@@ -19,18 +18,19 @@
               inset 15px 15px 30px rgba(0, 0, 0, 0.25);
   padding-bottom: 15px;
   z-index: 1;
+  transition: none;
 }
 .mainSalahCardDiv .imgDiv{
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  
 } 
 .mainSalahCardDiv .imgDiv img{
   width: 100%;
   height: 100%;
   border-radius: 20px;
-  z-index: -5;
 }
 .mainSalahCardDiv .imgDiv p{
   color: white;
@@ -54,7 +54,6 @@
 }
 .mainSalahCardDiv .salahInfoDiv p:nth-child(1){
   font-weight: 900;
-  
 }
 .mainSalahCardDiv .salahInfoDiv #remainingTimeText{
   background-color: var(--Thurd-color);
@@ -88,4 +87,67 @@
   border: 2px dashed rgba(255, 255, 255, 0.25);
   padding: 5px 15px 0px 15px;
   border-radius: 25px;
+}
+
+
+/* --------- responsive style of phones --------- */
+
+@media screen and (max-width: 440px){
+  .mainSalahCardDiv{
+    display: flex;
+    flex-direction: row;
+    min-width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    height: 4em;
+    margin-bottom: .5em;
+  }
+  .imgDiv{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+    height: 100%;
+    width: 65%;
+  } 
+  .imgDiv img{
+    height: 100%;
+    width: 100%;
+  }
+  .mainSalahCardDiv .imgDiv p{
+    font-size: 1.8em;
+  }
+  .mainSalahCardDiv .salahInfoDiv{
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .mainSalahCardDiv .salahInfoDiv p{
+    margin: 0;
+    margin-top: 5px;
+    font-size: 1.8em;
+  }
+  .mainSalahCardDiv .salahInfoDiv #remainingTimeText{
+    padding: 0;
+    /* margin-right: -0.1px; */
+    right: -50px;
+     /* background-color: red; */
+    &::before{
+      display: none;
+    }
+  }
+  .mainSalahCardDiv .salahInfoDiv #remainingTime{
+    color: white;
+    border: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    font-size: 1em;
+    border-radius: 15px;
+    margin-top: -15px;
+    margin-left: -75px;
+  }
 }
