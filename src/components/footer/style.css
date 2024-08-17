@@ -109,11 +109,10 @@
 }
 .socialLinksDiv a{
   text-decoration: none;
-  outline: none;
   position: relative;
   text-shadow: 0 0 1em white;
   padding: 0 10px;
-  /* transition: 0.25s ease-in-out; */
+  cursor: pointer;
   &::before{
     content: '';
     pointer-events: none;
@@ -142,6 +141,7 @@
   color: white;
   position: relative;
   transition: 0.25s ease-in-out;
+  outline: none !important;
 }
 
 @media screen and (max-width: 440px){

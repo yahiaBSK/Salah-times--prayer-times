@@ -2,11 +2,11 @@ import { useEffect, useRef, useState } from 'react';
 import './MainStyle.css'
 import SalahCard from './Salah card/SalahCard.jsx'
 import Footer from './footer/Footer.jsx'
-import fajr from '../assets/fajr.jpg'
-import dhuhr from '../assets/dhuhr.jpg'
-import asr from '../assets/asr.jpg'
-import maghrib from '../assets/maghrib.jpg'
-import isha from '../assets/isha.jpg'
+import fajr from '../assets/fajr.webp'
+import dhuhr from '../assets/dhuhr.webp'
+import asr from '../assets/asr.webp'
+import maghrib from '../assets/maghrib.webp'
+import isha from '../assets/isha.webp'
 
 function MainPage(){
 
@@ -131,7 +131,7 @@ function MainPage(){
           if ((remainingSec) < 10) {
             secPadding = "0"
           }
-          return `${hrsPadding}${remainingHrs}:${minPadding}${60+remainingMin}:${secPadding}${remainingSec}`
+          return `${hrsPadding}${remainingHrs-1}:${minPadding}${60+remainingMin}:${secPadding}${remainingSec}`
         }
 
         if (remainingHrs >= 0 && remainingMin >= 0) {
@@ -144,7 +144,7 @@ function MainPage(){
           if ((remainingSec) < 10) {
             secPadding = "0"
           }
-          return `${hrsPadding}${remainingHrs}:${minPadding}${remainingMin}:${secPadding}${remainingSec}`
+          return `${hrsPadding}${remainingHrs-1}:${minPadding}${remainingMin}:${secPadding}${remainingSec}`
         }
 
         else{
@@ -246,7 +246,7 @@ function MainPage(){
         <SalahCard image={isha} salahName="العشاء" salahTime={salahTime.Isha} remainingTime={remainingTime.Isha} color={color.Isha}/>
       </div>
     </div>
-    <Footer></Footer>
+    <Footer/>
     </>
   )
 }

@@ -1,5 +1,5 @@
 import './style.css'
-import ybskImage from '../../assets/ybsk2.jpg'
+import ybskImage from '../../assets/ybsk2.webp'
 
 
 function Footer() {
@@ -8,7 +8,7 @@ function Footer() {
     <div className="mainFooterDiv">
       <div className="devInfoDiv">
         <div className="imgDiv">
-          <img src={ybskImage} alt="" />
+          <img src={ybskImage} alt="Prayer image" loading='eager'/>
         </div>
         <div className="infoDiv">
           <p id='devName'>Yahia BSK</p>
@@ -19,10 +19,26 @@ function Footer() {
         
       </div>
       <div className="socialLinksDiv">
-        <a href="https://www.facebook.com/BSK.yahia/" target='_blank' id="facebook"><i className="fa-brands fa-facebook-f"></i></a>
-        <a href="https://www.instagram.com/bsk.yahia/" target='_blank' id="instagram"><i className="fa-brands fa-instagram"></i></a>
-        <a href="https://github.com/yahiaBSK" target='_blank' id="github"><i className="fa-brands fa-github-alt"></i></a>
-        <a href="https://www.linkedin.com/in/yahia-bsk/" target='_blank' id="linkedin"><i className="fa-brands fa-linkedin-in"></i></a>
+        <a id="facebook" onClick={()=>{
+          setTimeout(() => {
+            window.open('https://www.facebook.com/BSK.yahia/', '_blank');
+          }, 500);
+        }}><i className="fa-brands fa-facebook-f"></i></a>
+        <a id="instagram" onClick={()=>{
+          setTimeout(() => {
+            window.open('https://www.instagram.com/bsk.yahia/', '_blank');
+          }, 500);
+        }}><i className="fa-brands fa-instagram"></i></a>
+        <a id="github" onClick={()=>{
+          setTimeout(() => {
+            window.open('https://github.com/yahiaBSK', '_blank');
+          }, 500);
+        }}><i className="fa-brands fa-github-alt"></i></a>
+        <a id="linkedin" onClick={()=>{
+          setTimeout(() => {
+            window.open('https://www.linkedin.com/in/yahia-bsk/', '_blank');
+          }, 500);
+        }}><i className="fa-brands fa-linkedin-in"></i></a>
       </div>
     </div>
     </>
